@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<link href="stylesheets/styles.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="scripts/tasks.js"></script>
+	<title>Pending Tasks</title>
+</head>
+<body>
+<!-- <form action="/ReplenisherTask/pendingtasks" method="GET">
+	<p>TaskID: <input type="text" id="taskID" name="taskID" /></p>
+	<p>Task: <input type="text" id="task" name="task" /></p>
+	<p>Notes: <input type="text" id="notes" name="notes" /></p>
+	<p>Feedback: <input type="text" id="feedback" name="feedback" /></p>
+	<p>Status: <input type="text" id="status" name="status" /></p>
+	<p>Rank: <input type="text" id="rank" name="rank" /></p>
+	<input type="submit" value="Submit" />
+</form> -->
+
+<form action="/ReplenisherTask/pendingtasks" method="GET">
+	Search by 
+	<SELECT NAME="searchCriteria" id="searchCriteria">
+		<OPTION value="Status">STATUS</OPTION>
+	</SELECT> 
+	for: 
+	<input type="text" id="searchTerm" name="searchTerm" value="1" />
+	<input type="submit" value="Submit" id="searchButton" />
+</form>
+
+	<!-- <table id="PendingTasksTable">
+	  <tr>
+	   When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:  
+	    <th>TaskID</th>
+	    <th>Task</th>
+	    <th>Notes</th>
+	    <th>FeedBack</th>
+	    <th>Status</th>
+	    <th>Rank</th>
+	  </tr>
+	  <tr>
+	    <td>1</td>
+	    <td>Replace Milk</td>
+	    <td>Add 20 more cartons</td>
+	    <td></td>
+	    <td>In Progress</td>
+	    <td>2</td>
+	  </tr>
+	</table> -->
+	<div id="searchResults"></div>
+</body>
+</html>
